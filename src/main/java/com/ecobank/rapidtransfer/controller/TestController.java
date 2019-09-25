@@ -44,7 +44,7 @@ public class TestController {
         try {
             conn = Utilities.getConnection();
             Statement statement = conn.createStatement();
-            inserted = statement.executeUpdate("insert into user_record_test values (" + "'" + userRecord.getUserName() + "'" + "," + "'" + userRecord.getFirstName() + "'" + "," + "'" + userRecord.getLastName() + "'" + ")");
+            inserted = statement.executeUpdate("insert into user_record_test (user_id, first_name, last_name) values (" + "'" + userRecord.getUserName() + "'" + "," + "'" + userRecord.getFirstName() + "'" + "," + "'" + userRecord.getLastName() + "'" + ")");
             
             System.out.println("INSERTED +++ " + inserted);
         } 
